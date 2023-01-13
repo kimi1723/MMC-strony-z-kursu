@@ -1,0 +1,37 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+.bg-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 250px;
+  width: 400px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-image: url(https://unsplash.it/600/400);
+  transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+.bg-hero:hover {
+  transform: translate(-50%, -50%) rotate(-360deg);
+}
+.bg-hero:hover .content {
+  color: gold;
+}
+.bg-hero .content {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: white;
+  transition: color 1s 1s;
+}
+.bg-hero .content p {
+  line-height: 250px;
+  font-size: 35px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=main.css.map */
