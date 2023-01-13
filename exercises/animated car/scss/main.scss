@@ -1,0 +1,151 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sky {
+    height: 60vh;
+    width: 100vw;
+    animation: night 4s forwards;
+    
+    .sun {
+        position: relative;
+        top: 25%;
+        left: 50px;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        background-color: orange;
+        box-shadow: 1px 1px 50px orange;
+        animation: sunMove linear 4s forwards;
+    }
+}
+
+.ground {
+    height: 40vh;
+    background-color: #403535;
+    overflow: hidden;
+    transition: overflow 4s;
+    
+   .road {
+    position: relative;
+    height: 20vh;
+    background-color: grey;
+    border-bottom: 25px green solid;
+    border-top: 25px green solid;
+   }
+
+   .car {
+        position: absolute;
+        top: -10%;
+        left: 15%;
+        height: 100px;
+        width: 200px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        background-color: rgb(222,0,0);
+        animation: drive linear 4s forwards;
+        z-index: 100;
+
+        .window {
+            position: absolute;
+            top: 10px;
+            height: 40px;
+            width: 60px;
+            background-color: royalblue;
+        }
+
+        .front-window {
+            border-top-left-radius: 13.5px;
+        }
+
+        .rear-window {
+            right: 0;
+            border-top-right-radius: 13.5px;
+        }
+    }
+
+    .car::before, .car::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(222,0,0);
+    }
+    
+    .car::before {
+        left: -40px;
+        border-top-left-radius: 40%;
+    }
+
+    .car::after {
+        right: -40px;
+        border-top-right-radius: 40%;
+    }
+
+    .wheel {
+        position: absolute;
+        top: 65px;
+        height: 50px;
+        width: 50px;
+        border: 4px dashed darkgrey;
+        border-radius: 50%;
+        background-color: #000;
+        animation: wheelsMove ease-in-out 4s;
+    }
+    .rear-wheel {
+        left: 150px;
+        z-index: 1;
+    }
+}
+
+@keyframes sunMove {
+    0% {
+        top: 100%;
+    }
+    25% {
+        top: 25%;
+    }
+    50% {
+        top: 25%;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+@keyframes night {
+    0% {
+        background-color: #000;
+    }
+    25% {
+        background-color: royalblue;
+    }
+    50% {
+        background-color: royalblue;
+    }
+    100% {
+        background-color: #000;
+    }
+}
+
+@keyframes drive {
+    0% {
+        left: 0%;
+    }
+    100% {
+        visibility: hidden;
+        left: 100%;
+    }
+}
+
+@keyframes wheelsMove {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
