@@ -1,0 +1,38 @@
+@mixin divs {
+    height: 300px;
+    width: 300px;
+}
+body{
+    background-color: #000;
+}
+.circle{
+    @include divs;
+    border-radius: 50%;
+    background-color: rgb(0,240,0);
+    animation: circleA 2s 4s;
+}
+
+.square{
+    @include divs;
+    background-color: #D00;
+    animation: squareA 4s forwards;
+}
+
+@keyframes squareA {
+    50% {
+        width: 600px;
+    }
+    100%{
+        width: 300px;
+        height: 600px;
+        background-color: yellowgreen;
+    }
+}
+@keyframes circleA {
+        from {
+
+        }
+        to {
+            background-color: royalblue;
+        }
+}
