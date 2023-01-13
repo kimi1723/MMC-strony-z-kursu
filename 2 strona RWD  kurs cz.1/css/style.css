@@ -4,10 +4,25 @@
     box-sizing: border-box;
   }
   
+:root{
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Raleway", sans-serif;
     font-size: 10px;
+    height: 100%;
 }
+
+.section-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+/* nav */
 
 .wrapper {
     margin: 0 auto;
@@ -40,13 +55,17 @@ body {
     color: #09f;
 }
 nav {
+    position: fixed;
+    width: 100%;
     height: 60px;
     line-height: 60px;
     background-color: #ddd;
     text-align: center;
+    z-index: 99;
 }
 
 
+/* menu burger */
 
 .burger-icon {
     display: block;
@@ -67,6 +86,8 @@ nav {
     display: none;
 }
 
+/* header */
+
 .header {
     position: relative;
     background-image: url(../images/small.jpg);
@@ -75,12 +96,92 @@ nav {
     height: 300px;
 }
 
+/* main */
+
+main {
+    margin: 60px 0;
+}
+
+/* o nas */
+.about-us-info {
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+/* produkty */
+
+.products {
+    margin: 60px auto;
+}
+.product {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.product h3 {
+    text-transform: uppercase;
+    transition: color, transform 0.3s;
+}
+
+.product:hover {
+    cursor: pointer;
+}
+
+.product:hover h3 {
+    transform: scale(1.5);
+    color: #09f;
+}
+
+.first-product{
+    background-image: url(../images/happy\ children\ laptop.jpg);
+}
+
+.second-product{
+    background-image: url(../images/aesthetic\ keyboard.jpg);
+}
+
+.third-product{
+    background-image: url(../images/at\ work.jpg);
+}
+
+.fourth-product{
+    background-image: url(../images/laptop\ workspace.jpg);
+}
+
+/* kontakt */
+
+.contact {
+    text-align: center;
+}
+
+.contact h3 {
+    margin: 20px 0 5px;
+    text-transform: uppercase;
+}
+
+/* footer */
+
+footer {
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #ddd;
+}
+
+/*  */
 @media (min-width: 768px) {
-    
+
     .burger-icon {
         display: none;
     }
-    .nav-items a{
+    .nav-items {
+        display: block;
+        font-size: 20px;
+    }
+
+    .nav-items a {
         padding: 0 30px;
         text-decoration: none;
         text-transform: uppercase;
@@ -88,11 +189,9 @@ nav {
         color: #333;
         transition: color 0.3s;
     }
-    .nav-items a:hover{
+
+    .nav-items a:hover {
         color:royalblue
-    }
-    .nav-items {
-        display: block;
     }
 
     .header {
@@ -107,6 +206,35 @@ nav {
         font-size: 18px;
     }
 
+    .section-title {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .product h3 {
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .about-us-info {
+        margin-bottom: 10px;
+        padding: 0 20px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .products-box {
+        font-size: 0;
+    }
+
+   .product {
+        display: inline-block;
+        width: 50%;
+   }
 }
 
 @media (min-width: 1200px) {
