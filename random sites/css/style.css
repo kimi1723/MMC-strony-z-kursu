@@ -1,52 +1,9 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #000;
-}
-
-.circle {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  background-color: rgb(0, 240, 0);
-  -webkit-animation: circleA 2s 4s;
-          animation: circleA 2s 4s;
-}
-
-.square {
-  height: 300px;
-  width: 300px;
-  background-color: #D00;
-  -webkit-animation: squareA 4s forwards;
-          animation: squareA 4s forwards;
-}
-
-@-webkit-keyframes squareA {
-  50% {
-    width: 600px;
-  }
-  100% {
-    width: 300px;
-    height: 600px;
-    background-color: yellowgreen;
-  }
-}
-
-@keyframes squareA {
-  50% {
-    width: 600px;
-  }
-  100% {
-    width: 300px;
-    height: 600px;
-    background-color: yellowgreen;
-  }
-}
-@-webkit-keyframes circleA {
-  to {
-    background-color: royalblue;
-  }
-}
-@keyframes circleA {
-  to {
-    background-color: royalblue;
-  }
 }/*# sourceMappingURL=style.css.map */
