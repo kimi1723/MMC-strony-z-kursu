@@ -1,0 +1,265 @@
+@use 'colors' as color;
+
+$desktop: 1200px;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-padding-top: 72px;
+
+	@media (max-width: 275px) {
+		scroll-padding-top: 112px;
+	}
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #ddd;
+	font-size: 10px;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto;
+	width: 4rem;
+	height: 0.25rem;
+	background-color: color.$main-color;
+}
+
+.blue-text {
+	color: color.$main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+	text-transform: uppercase;
+	font-size: 1rem;
+	transition: background-color 0.5s;
+	z-index: 999;
+
+	.navbar-brand {
+		color: color.$white;
+		font-weight: bold;
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: color.$white;
+
+			&:hover {
+				color: color.$main-color;
+			}
+
+			&.active {
+				color: color.$main-color;
+			}
+		}
+	}
+}
+
+.hero-bg {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/mobile/logo-mobile.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	@media (min-width: $desktop) {
+		background-image: url(../img/desktop/logo-desktop.jpg);
+	}
+
+	.hero-shadow-and-text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 100vh;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.8);
+
+		h1 {
+			padding: 1rem;
+			color: color.$white;
+			text-transform: uppercase;
+			font-size: 2rem;
+
+			span:first-child {
+				&::after {
+					content: '\a';
+					white-space: pre;
+				}
+			}
+
+			span:last-child {
+				font-size: 0.8rem;
+				text-transform: none;
+			}
+		}
+
+		@media (min-width: $desktop) {
+			h1 {
+				font-size: 4rem;
+
+				span:last-child {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		@media (min-width: 375px) {
+			h1 {
+				font-size: 2.5rem;
+
+				span:last-child {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		@media (min-width: 768px) {
+			h1 {
+				font-size: 3rem;
+
+				span:last-child {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		bottom: 2rem;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 2rem;
+		color: color.$white;
+
+		@media (min-width: $desktop) {
+			font-size: 3rem;
+		}
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 1.3rem;
+		font-size: 1.9rem;
+	}
+
+	.aboutus-card-title {
+		font-size: 1.1rem;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 0.8rem;
+	}
+
+	.aboutus-hover {
+		transition: color 0.3s;
+	}
+	.aboutus-hover:hover {
+		color: color.$main-color;
+	}
+}
+
+.aboutus-hero {
+	background-image: url(/img/mobile/procesor-mobile.jpg);
+	background-size: cover;
+	background-position: center;
+
+	@media (min-width: 992px) {
+		background-image: url(/img/desktop/procesor-desktop.jpg);
+	}
+}
+
+.aboutus-hero-content {
+	color: color.$light-gray;
+	background: rgba(0, 0, 0, 0.7);
+
+	h2 {
+		padding-top: 2.5rem;
+	}
+
+	.aboutus-heading {
+		margin-top: 1.5rem;
+	}
+
+	.aboutus-item {
+		margin: 0.6rem 0;
+	}
+
+	i {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.aboutus-text {
+		font-size: 1.3rem;
+	}
+}
+
+.portfolio {
+	.container {
+		margin-top: 2rem;
+	}
+	.carousel-item {
+		height: 600px;
+	}
+
+	.carousel-caption {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.portfolio-cards {
+	padding: 2rem 0.3rem 0;
+
+	.card {
+		max-width: 100%;
+		margin-bottom: 1rem;
+
+		@media (min-width: 576px) {
+			margin: 0 1rem;
+
+			.card-img-top {
+				height: 9rem;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		height: 100%;
+	}
+	@media (min-width: 992px) {
+		display: none;
+	}
+}
