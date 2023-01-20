@@ -194,12 +194,16 @@ nav .navbar-nav .nav-link.active {
 .portfolio .carousel-item {
   height: 600px;
 }
+.portfolio h3 {
+  font-size: 2rem;
+}
 .portfolio .carousel-caption {
   position: absolute;
   right: 0;
   left: 0;
   bottom: 0;
   padding: 40px 0;
+  font-size: 1rem;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .portfolio .carousel-indicators {
@@ -213,12 +217,25 @@ nav .navbar-nav .nav-link.active {
   max-width: 100%;
   margin-bottom: 1rem;
 }
+.portfolio-cards .card .card-title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.portfolio-cards .card .card-text {
+  font-size: 0.8rem;
+}
 @media (min-width: 576px) {
   .portfolio-cards .card {
     margin: 0 1rem;
   }
   .portfolio-cards .card .card-img-top {
     height: 9rem;
+  }
+  .portfolio-cards .card .card-title {
+    font-size: 2rem;
+  }
+  .portfolio-cards .card .card-text {
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
@@ -229,5 +246,102 @@ nav .navbar-nav .nav-link.active {
 @media (min-width: 992px) {
   .portfolio-cards {
     display: none;
+  }
+}
+
+.prices {
+  max-width: 90%;
+}
+.prices .packages-container {
+  max-width: 1200px;
+}
+.prices .device {
+  width: 310px;
+  padding: 2rem 4rem;
+  background-color: #fff;
+  box-shadow: 0.5rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}
+.prices .device p:last-of-type {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.prices h3 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(99, 94, 94, 0.3);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  color: #039dff;
+}
+.prices p {
+  font-size: 0.8rem;
+}
+.prices p span {
+  font-weight: bold;
+}
+.prices p i {
+  font-size: 1.3rem;
+  letter-spacing: 0.5rem;
+}
+.prices button[type=button]:not(:disabled) {
+  color: #fff;
+  background-color: rgb(122, 119, 119);
+  transition: background-color 0.15s ease-in-out;
+}
+.prices button[type=button]:not(:disabled):hover {
+  background-color: #039dff;
+}
+.prices .device2 button[type=button]:not(:disabled) {
+  background-color: #039dff;
+}
+.prices .device2 button[type=button]:not(:disabled):hover {
+  background-color: rgb(122, 119, 119);
+}
+.prices .prices-footer {
+  padding: 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .prices .packages-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3rem 1rem;
+  }
+  .prices .packages-container .device {
+    max-width: 200px;
+  }
+  .prices .packages-container .device1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .prices .packages-container .device2 {
+    grid-column: 3/6;
+    grid-row: 2/3;
+  }
+  .prices .packages-container .device3 {
+    grid-column: 5/8;
+    grid-row: 1/2;
+    margin-top: 24px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .prices .packages-container {
+    display: flex;
+    margin: 3rem 0;
+  }
+  .prices .packages-container .device {
+    margin: 0 2rem;
+  }
+  .prices .packages-container .device2 {
+    margin-top: 24px;
+  }
+  .prices .packages-container .device3 {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 320px) {
+  .prices .device {
+    max-width: 230px;
   }
 }/*# sourceMappingURL=main.css.map */
