@@ -249,14 +249,10 @@ nav .navbar-nav .nav-link.active {
   }
 }
 
-.prices {
-  max-width: 90%;
-}
 .prices .packages-container {
   max-width: 1200px;
 }
 .prices .device {
-  width: 310px;
   padding: 2rem 4rem;
   background-color: #fff;
   box-shadow: 0.5rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
@@ -307,9 +303,6 @@ nav .navbar-nav .nav-link.active {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 3rem 1rem;
-  }
-  .prices .packages-container .device {
-    max-width: 200px;
   }
   .prices .packages-container .device1 {
     grid-column: 1/4;

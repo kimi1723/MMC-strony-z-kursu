@@ -287,14 +287,11 @@ nav {
 }
 
 .prices {
-	// padding: 1rem;
-	max-width: 90%;
 	.packages-container {
 		max-width: 1200px;
 	}
 
 	.device {
-		width: 310px;
 		padding: 2rem 4rem;
 		background-color: color.$white;
 		box-shadow: 0.5rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
@@ -339,7 +336,6 @@ nav {
 	}
 
 	.device2 {
-		// max-width: 50%;
 		button[type='button']:not(:disabled) {
 			background-color: color.$main-color;
 
@@ -359,9 +355,6 @@ nav {
 			grid-template-columns: repeat(7, 1fr);
 			gap: 3rem 1rem;
 
-			.device {
-				max-width: 200px;
-			}
 			.device1 {
 				grid-column: 1 / 4;
 				grid-row: 1 / 2;
