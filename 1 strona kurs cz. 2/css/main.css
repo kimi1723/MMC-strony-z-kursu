@@ -51,6 +51,12 @@ nav .navbar-brand {
   color: #fff;
   font-weight: bold;
 }
+nav .navbar-brand:hover {
+  color: #039dff;
+}
+nav .navbar-brand:hover span {
+  color: #fff;
+}
 nav .navbar-nav .nav-link {
   color: #fff;
 }
