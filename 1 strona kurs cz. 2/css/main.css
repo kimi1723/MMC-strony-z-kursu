@@ -263,6 +263,10 @@ nav .navbar-nav .nav-link.active {
   background-color: #fff;
   box-shadow: 0.5rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
   margin-bottom: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+.prices .device:hover {
+  transform: scale(1.05);
 }
 .prices .device p:last-of-type {
   font-size: 2rem;
@@ -287,12 +291,21 @@ nav .navbar-nav .nav-link.active {
   letter-spacing: 0.5rem;
 }
 .prices button[type=button]:not(:disabled) {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
   color: #fff;
   background-color: rgb(122, 119, 119);
   transition: background-color 0.15s ease-in-out;
 }
 .prices button[type=button]:not(:disabled):hover {
   background-color: #039dff;
+}
+@media (max-width: 320px) {
+  .prices button[type=button]:not(:disabled) {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 .prices .device2 button[type=button]:not(:disabled) {
   background-color: #039dff;
@@ -303,6 +316,9 @@ nav .navbar-nav .nav-link.active {
 .prices .prices-footer {
   padding: 1rem;
   text-align: center;
+}
+.prices .prices-footer a {
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .prices .packages-container {
@@ -343,4 +359,42 @@ nav .navbar-nav .nav-link.active {
   .prices .device {
     max-width: 230px;
   }
+}
+
+.team {
+  position: relative;
+  background-image: url(/img/desktop/chairs-2181960_1920.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.team h2 {
+  color: #ddd;
+}
+.team .bg-hero-team {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -5;
+}
+.team .card {
+  transition: transform 0.3s ease-in-out;
+}
+.team .card img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team .card .card-title {
+  text-transform: uppercase;
+  margin-bottom: 1.3rem;
+}
+.team .card .card-text {
+  font-size: 0.7rem;
+}
+.team .card:hover {
+  transform: scale(1.05);
 }/*# sourceMappingURL=main.css.map */

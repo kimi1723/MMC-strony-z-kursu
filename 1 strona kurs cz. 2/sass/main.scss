@@ -304,6 +304,11 @@ nav {
 		background-color: color.$white;
 		box-shadow: 0.5rem 0.5rem 0.3rem rgba(0, 0, 0, 0.5);
 		margin-bottom: 1.5rem;
+		transition: transform 0.3s ease-in-out;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 
 		p:last-of-type {
 			font-size: 2rem;
@@ -334,12 +339,20 @@ nav {
 	}
 
 	button[type='button']:not(:disabled) {
+		padding: 0.5rem 1rem;
+		text-transform: uppercase;
 		color: color.$white;
 		background-color: rgb(122, 119, 119);
 		transition: background-color 0.15s ease-in-out;
 
 		&:hover {
 			background-color: color.$main-color;
+		}
+
+		@media (max-width: 320px) {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%);
 		}
 	}
 
@@ -355,6 +368,10 @@ nav {
 	.prices-footer {
 		padding: 1rem;
 		text-align: center;
+
+		a {
+			text-decoration: none;
+		}
 	}
 
 	@media (min-width: 768px) {
@@ -403,6 +420,51 @@ nav {
 	@media (max-width: 320px) {
 		.device {
 			max-width: 230px;
+		}
+	}
+}
+
+// TEAM
+
+.team {
+	position: relative;
+	background-image: url(/img/desktop/chairs-2181960_1920.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		color: color.$light-gray;
+	}
+	.bg-hero-team {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -5;
+	}
+
+	.card {
+		// height: 350px;
+		transition: transform 0.3s ease-in-out;
+
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+
+		.card-title {
+			text-transform: uppercase;
+			margin-bottom: 1.3rem;
+		}
+
+		.card-text {
+			font-size: 0.7rem ;
+		}
+		&:hover {
+			transform: scale(1.05);
 		}
 	}
 }
