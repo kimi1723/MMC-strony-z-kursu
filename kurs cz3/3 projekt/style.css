@@ -129,6 +129,7 @@ span:nth-child(8) {
 .text::before {
 	content: '22/01/2023';
 	position: absolute;
+
 	top: -70px;
 	left: 0;
 	animation: slide 1s 3s forwards;
