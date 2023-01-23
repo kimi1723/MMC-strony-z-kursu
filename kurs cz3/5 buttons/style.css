@@ -34,7 +34,7 @@ button::after {
 	content: '';
 	position: absolute;
 	transition: all 0.5s;
-	/* z-index: -1; */
+	z-index: -1;
 }
 
 /* slide */
@@ -45,7 +45,6 @@ button::after {
 }
 
 .slide::after {
-	/* height: 100%; */
 	top: 50%;
 	left: -100%;
 	border: 31px solid #fff;
@@ -90,4 +89,106 @@ span {
 
 .slide:hover .span2 {
 	left: 50%;
+}
+
+/* slice */
+
+.slice::before,
+.slice::after {
+	width: 100%;
+	height: 100%;
+	background-color: #0dbfe3;
+}
+
+.slice::before {
+	top: -50%;
+	left: -100%;
+}
+
+.slice::after {
+	bottom: -50%;
+	right: -100%;
+}
+
+.slice:hover::before {
+	left: 0;
+}
+
+.slice:hover::after {
+	right: 0;
+}
+
+/* efekt glebi */
+.hmm {
+	border: none;
+	transition: all 0.5s;
+}
+
+.hmm:hover {
+	box-shadow: 2px 3px 0 #fff8, inset 11px 6px 10px #0002;
+}
+
+/* border */
+
+.border {
+	border-radius: 0;
+	overflow: visible;
+	transition: all 0.5s 0.5s;
+	border: 1px solid #fff;
+	z-index: 0;
+}
+
+.border::after,
+.border::before {
+	width: 100%;
+	height: 100%;
+}
+
+.border::before {
+	top: 0;
+	left: 0;
+	border-top: 0px solid #0dbfe3;
+	border-left: 0px solid #0dbfe3;
+}
+
+.border::after {
+	bottom: 0;
+	right: 0;
+	border-bottom: 0px solid #0dbfe3;
+	border-right: 0px solid #0dbfe3;
+}
+
+.border:hover::after {
+	bottom: -10px;
+	right: -10px;
+	border-bottom: 5px solid #0dbfe3;
+	border-right: 5px solid #0dbfe3;
+}
+
+.border:hover::before {
+	top: -10px;
+	left: -10px;
+	border-top: 5px solid #0dbfe3;
+	border-left: 5px solid #0dbfe3;
+}
+
+.border:hover {
+	color: #0dbfe3;
+	border: 1px solid transparent;
+	transition: all 0.5s;
+}
+
+/* glass */
+
+.glass::before {
+	top: -30px;
+	left: -130px;
+	height: 160%;
+	width: 100px;
+	background-image: linear-gradient(-90deg, #fff3, #fff0);
+	transform: rotate(20deg);
+}
+
+.glass:hover::before {
+	left: 130%;
 }
