@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #363636;
+}
+
+.card {
+	width: 400px;
+	background-color: #ddd;
+	border-radius: 8px;
+    
+	&__img {
+		width: 100%;
+		border-radius: 8px;
+	}
+
+	&__body {
+		padding: 10px 20px;
+	}
+
+	&__text {
+		margin: 20px 0;
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__btn {
+		padding: 10px 20px;
+		border: 1px solid #0006;
+		border-radius: 8px;
+		cursor: pointer;
+
+		&--highlight {
+			background-color: #aee986;
+		}
+	}
+}

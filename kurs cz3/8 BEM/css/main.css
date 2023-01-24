@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #363636;
+}
+
+.card {
+  width: 400px;
+  background-color: #ddd;
+  border-radius: 8px;
+}
+.card__img {
+  width: 100%;
+  border-radius: 8px;
+}
+.card__body {
+  padding: 10px 20px;
+}
+.card__text {
+  margin: 20px 0;
+}
+.card__btns {
+  display: flex;
+  justify-content: space-around;
+}
+.card__btn {
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.card__btn--highlight {
+  background-color: #aee986;
+}/*# sourceMappingURL=main.css.map */
