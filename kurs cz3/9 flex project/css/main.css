@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "sans";
+  src: url("/sass/fonts/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"), url("/sass/fonts/opensans-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "sansitalic";
+  src: url("/sass/fonts/opensans-italic-variablefont_wdthwght-webfont.woff2") format("woff2"), url("/sass/fonts/opensans-italic-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "dancing";
+  src: url("/sass/fonts/dancingscript-variablefont_wght-webfont.woff2") format("woff2"), url("/sass/fonts/dancingscript-variablefont_wght-webfont.woff") format("woff");
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #363636;
+  color: #1755e7;
+  font-size: 60px;
+  font-family: "sans";
+}
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+.burger-btn:hover .burger-btn__bars::before, .burger-btn:hover .burger-btn__bars::after {
+  width: 100%;
+}
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  transform: translateY(-25%);
+  right: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+.burger-btn__bars {
+  width: 100%;
+}
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30px;
+  transition-delay: 0.1s;
+}/*# sourceMappingURL=main.css.map */
