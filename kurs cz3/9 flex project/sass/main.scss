@@ -173,8 +173,307 @@ body {
 	}
 }
 
+// MAIN
+// DREAMS SECTION
+.dreams {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+	}
+
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+
+	&__title {
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+}
+
+// HERO-IMG SECTION
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	@include heroImages('/img/mobile/hd-wallpaper-3021072_640.jpg');
+	text-align: center;
+	color: $pure-white;
+	overflow: hidden;
+
+	&__title {
+		font-family: $serif, cursive;
+		margin-bottom: 0.5em;
+		font-size: 4.8rem;
+	}
+
+	&__text {
+		position: relative;
+		padding: 1em 0;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $pure-white;
+			width: 95%;
+			height: 1px;
+		}
+
+		&::before {
+			top: -5px;
+		}
+
+		&::after {
+			bottom: -5px;
+		}
+	}
+}
+
+// THIRD SECTION ISLANDS
+.islands {
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: $pure-white;
+		text-align: center;
+		perspective: 1000px;
+
+		&:hover {
+			.islands__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+
+			.islands__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+
+		&-img {
+			padding: 2em;
+			height: 100%;
+			border-radius: 8px;
+			background-size: cover;
+			transition: transform 1s, opacity 1s;
+
+			&--first {
+				background-image: $light-blue-gradient, url(/img/island1.jpg);
+			}
+
+			&--second {
+				background-image: $blue-gradient, url(/img/island2.jpg);
+			}
+
+			&--third {
+				background-image: $purple-gradient, url(/img/island3.jpg);
+			}
+
+			&-title {
+				font-family: $serif, cursive;
+				font-size: 2.8rem;
+			}
+
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				font-size: 1.8rem;
+
+				I {
+					margin-right: 0.3em;
+				}
+			}
+		}
+
+		&-info {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-image: $light-blue-gradient-solid;
+			border-radius: 8px;
+			opacity: 0;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
+
+			&-title {
+				width: 80%;
+				@include islandsCardStyles;
+				top: 1.2em;
+				font-family: $serif, cursive;
+				font-size: 2.8rem;
+			}
+
+			&-list {
+				margin: 0 auto;
+				width: 70%;
+				list-style: none;
+
+				&-item {
+					padding: 1em;
+					font-size: 1.4rem;
+					border-bottom: 1px solid $light-white;
+
+					&:last-child {
+						border: none;
+					}
+				}
+			}
+
+			&-btn {
+				@include islandsCardStyles;
+				bottom: 2em;
+				padding: 1em;
+				border-radius: 8px;
+				width: 80%;
+				border: none;
+				background-color: $green-color;
+				cursor: pointer;
+
+				&::before {
+					background-color: $green-color-hover;
+				}
+			}
+		}
+	}
+}
+
+// FOURTH SECTION OFFERS
+.offers {
+	position: relative;
+	@include heroImages('/img/mobile/maldives-3220702_640.jpg');
+	overflow: hidden;
+
+	.section-heading {
+		color: $pure-white;
+	}
+
+	&__option {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+		background-color: $pure-white;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-info {
+			padding: 2em;
+			background-color: $pure-white;
+			z-index: 10;
+		}
+
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3rem;
+			color: $dark;
+		}
+
+		&-btn {
+			margin-top: 1em;
+			padding: 0.8em;
+			width: 100%;
+			color: $pure-white;
+			background-color: $main-color;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+
+			&::before {
+				background-color: $secondary-color;
+			}
+		}
+	}
+}
 // MEDIA
 
+@media (min-width: 576px) {
+	.dreams {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+				width: 55%;
+
+				&--right {
+					text-align: right;
+				}
+			}
+
+			&-img {
+				width: 40%;
+
+				&--right {
+					order: 1;
+				}
+			}
+		}
+
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
+
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img {
+				width: 50%;
+				height: auto;
+
+				&--right {
+					order: 1;
+				}
+			}
+
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 50%;
+			}
+
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+
+			&-btn {
+				padding: 1em;
+			}
+		}
+	}
+}
 @media (min-width: 768px) {
 	.white-block {
 		height: 50px;
@@ -194,6 +493,42 @@ body {
 			font-size: 1.6rem;
 		}
 	}
+
+	.dreams {
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.hero-img {
+		padding: 30em 2em;
+
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+
+	.islands {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1em;
+			width: 45%;
+
+			&-img-title,
+			&-info-title {
+				font-size: 3.5rem;
+			}
+
+			&-info-list-item {
+				font-size: 1.7rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -207,6 +542,73 @@ body {
 
 		&__heading {
 			font-size: 10rem;
+		}
+	}
+
+	.nav {
+		&__item {
+			font-size: 3.6rem;
+		}
+	}
+
+	.dreams {
+		&__box {
+			margin: 5em 0;
+
+			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				margin-bottom: 2.5em;
+			}
+		}
+
+		&__title {
+			font-size: 2.8rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.hero-img {
+		padding: 40em 2em;
+		background-image: $blue-gradient, url('/img/desktop/hd-wallpaper-3021072_1920.jpg');
+
+		&__title {
+			font-size: 7.2rem;
+		}
+
+		&__text {
+			&::before,
+			&::after {
+				width: 60%;
+				max-width: 900px;
+			}
+		}
+	}
+
+	.offers {
+		background-image: $blue-gradient, url('/img/desktop/maldives-3220702_1920.jpg');
+
+		&__option {
+			height: 300px;
+			&-img {
+				object-fit: cover;
+			}
+
+			&-text {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.islands {
+		&__card {
+			width: calc(90% / 3);
 		}
 	}
 }
