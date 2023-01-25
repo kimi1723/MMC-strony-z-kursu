@@ -1,3 +1,49 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.white-block {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+  background-color: #fff;
+}
+.white-block-left {
+  bottom: -2px;
+  left: -50px;
+  transform: skew(45deg);
+}
+.white-block-right {
+  top: 0;
+  right: -50px;
+  transform: skew(45deg);
+}
+
+.btn-special-animation {
+  position: relative;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+.btn-special-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.btn-special-animation:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 @font-face {
   font-family: "sans";
   src: url("/sass/fonts/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"), url("/sass/fonts/opensans-variablefont_wdthwght-webfont.woff") format("woff");
@@ -26,13 +72,13 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
-  background-color: #363636;
-  color: #1755e7;
-  font-size: 60px;
-  font-family: "sans";
+  font-family: "sans", sans-serif;
+  font-size: 1.6rem;
+  height: 500vh;
 }
 
 .burger-btn {
@@ -61,8 +107,7 @@ body {
 .burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
   content: "";
   position: absolute;
-  top: 25%;
-  transform: translateY(-25%);
+  top: 0;
   right: 0;
   height: 3px;
   background-color: #fff;
@@ -77,6 +122,134 @@ body {
 }
 .burger-btn__bars::before {
   top: 27px;
-  width: 30px;
+  width: 30%;
   transition-delay: 0.1s;
+}
+
+.nav-items {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  transform: translateX(100%);
+  background-image: linear-gradient(45deg, rgb(20, 105, 241), rgb(42, 10, 184));
+  z-index: 100;
+  transition: transform cubic-bezier(0, 0, 0.99, 0.02) 0.5s;
+}
+.nav-items--active {
+  transform: translateX(0);
+}
+.nav__item {
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  font-size: 2.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+.nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  transform: scaleY(0);
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+.nav__item:hover::before {
+  transform: scaleY(1);
+}
+
+@-webkit-keyframes navItemsAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navItemsAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-items-animation {
+  -webkit-animation: navItemsAnimation 1s both;
+          animation: navItemsAnimation 1s both;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 75vh;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/mobile/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.header__heading {
+  font-family: "dancing", cursive;
+  font-size: 4.8rem;
+  font-weight: 300;
+}
+.header__text {
+  font-size: 1.4rem;
+}
+.header__btn {
+  margin-top: 2em;
+  padding: 0.8em 1.6em;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  color: #2e2e2e;
+  background-color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.header__btn::before {
+  background-color: #eee;
+}
+
+@media (min-width: 768px) {
+  .white-block {
+    height: 50px;
+    width: 45%;
+  }
+  .header__heading {
+    font-size: 6.6rem;
+  }
+  .header__text {
+    font-size: 2.2rem;
+  }
+  .header__btn {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+  .header {
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/desktop/header.jpg);
+  }
+  .header__heading {
+    font-size: 10rem;
+  }
 }/*# sourceMappingURL=main.css.map */

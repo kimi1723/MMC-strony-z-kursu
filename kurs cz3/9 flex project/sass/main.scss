@@ -13,13 +13,13 @@
 
 html {
 	scroll-behavior: smooth;
+	font-size: 62.5%;
 }
 
 body {
-	background-color: #363636;
-	color: $main-color;
-	font-size: 60px;
-	font-family: $main-font;
+	font-family: $main-font, sans-serif;
+	font-size: 1.6rem;
+	height: 500vh;
 }
 
 // NAV
@@ -66,8 +66,147 @@ body {
 
 		&::before {
 			top: 27px;
-			width: 30px;
+			width: 30%;
 			transition-delay: 0.1s;
+		}
+	}
+}
+
+// NAV
+.nav {
+	&-items {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		transform: translateX(100%);
+		background-image: $blue-gradient-solid;
+		z-index: 100;
+		transition: transform cubic-bezier(0, 0, 0.99, 0.02) 0.5s;
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+
+	&__item {
+		position: relative;
+		// display: block;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		color: $pure-white;
+		text-decoration: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			transform: scaleY(0);
+			background-color: $pure-white;
+			transition: transform 0.3s;
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s both;
+}
+// HEADER
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: $pure-white;
+	@include heroImages('../img/mobile/header.jpg');
+
+	&__heading {
+		font-family: $serif, cursive;
+		font-size: 4.8rem;
+		font-weight: 300;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		border: none;
+		border-radius: 8px;
+		color: $dark;
+		background-color: $pure-white;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: $light-white;
+		}
+	}
+}
+
+// MEDIA
+
+@media (min-width: 768px) {
+	.white-block {
+		height: 50px;
+		width: 45%;
+	}
+
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+
+	.header {
+		background-image: $blue-gradient, url(../img/desktop/header.jpg);
+
+		&__heading {
+			font-size: 10rem;
 		}
 	}
 }

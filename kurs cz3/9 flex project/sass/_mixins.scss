@@ -3,10 +3,19 @@
 @mixin burgerBtn {
 	content: '';
 	position: absolute;
-	top: 25%;
-	transform: translateY(-25%);
+	// top: 25%;
+	//
+	// transform: translateY(-25%);
+	top: 0;
 	right: 0;
 	height: 3px;
 	background-color: $pure-white;
 	transition: width 0.3s;
+}
+
+@mixin heroImages($bgImg) {
+	background-image: $blue-gradient, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
