@@ -23,6 +23,12 @@ body {
 }
 
 // NAV
+
+// FOR BUTTON BGC
+.white-section {
+	background-color: $pure-white;
+}
+
 .burger-btn {
 	position: fixed;
 	top: 20px;
@@ -32,6 +38,8 @@ body {
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 1000;
+	// FOR BUTTON BGC
+	mix-blend-mode: difference;
 
 	&:focus {
 		outline: none;
@@ -131,6 +139,12 @@ body {
 
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
 }
 // HEADER
 .header {
@@ -246,7 +260,8 @@ body {
 		text-align: center;
 		perspective: 1000px;
 
-		&:hover {
+		&:hover,
+		&:active {
 			.islands__card-img {
 				transform: rotateY(-180deg);
 				opacity: 0;
@@ -410,6 +425,150 @@ body {
 		}
 	}
 }
+
+// REVIEWS
+
+@media (max-width: 767px) {
+	.reviews.section-padding {
+		padding: 6em 0;
+	}
+}
+
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		&-img {
+			position: absolute;
+			top: 8%;
+			left: 75%;
+			transform: translate(-50%, -50%);
+
+			img {
+				width: 80px;
+				height: 80px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+
+		&-quote {
+			margin-bottom: 1em;
+			font-size: 3rem;
+			color: $main-color;
+		}
+
+		&-text {
+			margin-bottom: 1em;
+			font-size: 1.4rem;
+			color: $dark;
+		}
+	}
+}
+
+// CONTACT
+.contact {
+	position: relative;
+	background-color: $light-white;
+	overflow: hidden;
+
+	.white-block-left {
+		background-color: $dark;
+	}
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	&__form-input {
+		@include contactForm;
+	}
+
+	&__form-textarea {
+		@include contactForm;
+		resize: vertical;
+	}
+
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		border: none;
+		border-radius: 8px;
+		color: $pure-white;
+		background-color: $main-color;
+		cursor: pointer;
+
+		&::before {
+			background-color: $secondary-color;
+		}
+	}
+}
+
+// FOOTER
+.footer {
+	color: $pure-white;
+	background-color: $dark;
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	&__box {
+		font-size: 1.4rem;
+	}
+
+	&__box-desktop {
+		display: none;
+	}
+
+	&__box-title {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+
+	&__box-social {
+		margin: 2em 0 1em;
+	}
+
+	&__box-link {
+		padding: 0 0.3em;
+		font-size: 3.6rem;
+		color: $pure-white;
+		text-decoration: none;
+		transition: color 0.3s;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+
+	&__bottom-text {
+		padding: 2em;
+		text-align: center;
+	}
+}
 // MEDIA
 
 @media (min-width: 576px) {
@@ -526,6 +685,48 @@ body {
 
 			&-info-list-item {
 				font-size: 1.7rem;
+			}
+		}
+	}
+
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box-desktop {
+			display: block;
+		}
+
+		&__box {
+			margin: 0 2em;
+			width: 25%;
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+
+		&__box-title {
+			font-size: 2.4rem;
+		}
+
+		&__box-list {
+			list-style: none;
+		}
+
+		&__box-list-item {
+			margin-bottom: 1em;
+
+			a {
+				color: $light-white;
+				text-decoration: none;
+				transition: color 0.3s;
+
+				&:hover {
+					color: $secondary-color;
+				}
 			}
 		}
 	}

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://kit.fontawesome.com/b106b5fdab.js" crossorigin="anonymous"></script>
 </head>
@@ -117,7 +118,7 @@
                     </div>
 
                     <!-- card two -->
-                    <div class="islands__card" onclick="void(0)">
+                    <div class="islands__card" onclick="">
 
                         <div class="islands__card-img islands__card-img--second">
                             <h3 class="islands__card-img-title">Wyspa Toca Toca</h3>
@@ -227,9 +228,136 @@
             <h2 class="section-heading">Opinie</h2>
             <div class="wrapper">
 
+                <div class="reviews__boxes">
+                    <!-- review 1  -->
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="/img/attractive-1869761_640.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur quae
+                                obcaecati, sit quos voluptate voluptates nobis totam tempora hic, nostrum, saepe
+                                maiores?
+                            </p>
+                            <strong>Anna Nowak</strong>
+                        </div>
+                    </div>
+
+                    <!-- review 2 -->
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="/img/happy-1836445_640.jpg" alt="Jan Kowalski">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur quae
+                                obcaecati, sit quos voluptate voluptates nobis totam tempora hic, nostrum, saepe
+                                maiores?
+                            </p>
+                            <strong>Jan Kowalski</strong>
+                        </div>
+                    </div>
+
+                    <!-- review 3 -->
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="/img/woman-1919143_640.jpg" alt="Maja Wiśniewska">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur quae
+                                obcaecati, sit quos voluptate voluptates nobis totam tempora hic, nostrum, saepe
+                                maiores?
+                            </p>
+                            <strong>Maja Wiśniewska</strong>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- contact -->
+        <section id="contact" class="contact section-padding section white-section">
+            <div class="white-block white-block-left"></div>
+            <div class="white-block white-block-right"></div>
+
+            <h2 class="section-heading">Kontakt</h2>
+
+            <div class="wrapper">
+                <form class="contact__form">
+
+                    <div class="contact__form-top">
+
+                        <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                        <input type="text" id="name" class="contact__form-input">
+
+                        <label for="email" class="contact__form-label">Adres e-mail:</label>
+                        <input type="email" id="email" class="contact__form-input">
+                    </div>
+
+                    <label for="msg" class="contact__form-label">Wiadomość:</label>
+                    <textarea id="msg" class="contact__form-textarea"></textarea>
+
+                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                </form>
+            </div>
+
+        </section>
     </main>
+
+    <!-- footer -->
+    <footer class="footer">
+
+        <div class="wrapper">
+
+            <div class="footer__boxes">
+
+                <div class="footer__box">
+                    <h3 class="footer__box-title"><i class="fas fa-kiwi-bird"></i> TP Co.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestiae repellendus cumque odit
+                        assumenda corporis repudiandae eaque autem, illum ullam.</p>
+                    <div class="footer__box-social">
+                        <a href="#" class="footer__box-link"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" class="footer__box-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="footer__box-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title">Wyspy</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="#">Wyspa Tiki Taki</a></li>
+                        <li class="footer__box-list-item"><a href="#">Wyspa Toca Toca</a></li>
+                        <li class="footer__box-list-item"><a href="#">Wyspa Nobu</a></li>
+                        <li class="footer__box-list-item"><a href="#">Pozostałe wyspy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title"> O firmie</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="#">O nas</a></li>
+                        <li class="footer__box-list-item"><a href="#">Zarząd</a></li>
+                        <li class="footer__box-list-item"><a href="#">Kariera</a></li>
+                        <li class="footer__box-list-item"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <p class="footer__bottom-text">&copy; <span class="footer__year"></span>Tropical Paradise</p>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/slick.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
