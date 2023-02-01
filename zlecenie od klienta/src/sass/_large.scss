@@ -1,0 +1,84 @@
+@use 'colors' as c;
+
+@media (min-width: 992px) {
+	.header {
+		height: 40vh;
+	}
+	// NAVIGATION
+	.nav {
+		&__navbar {
+			padding-right: 0;
+			overflow: hidden;
+		}
+
+		.hamburger {
+			display: none;
+		}
+
+		&__links {
+			top: 0;
+			position: relative;
+			flex-direction: row;
+			height: auto;
+			max-height: 8rem;
+			transform: translateX(0);
+			opacity: 1;
+
+			&-link {
+				padding: 2em;
+				color: c.$dark;
+				transition: background-color 0.3s, color 0.3s;
+
+				&:hover {
+					color: c.$white;
+					background-color: c.$dark;
+				}
+			}
+		}
+	}
+
+	// HEADER
+
+	// ABOUT US
+	.about-us {
+		&__content {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		&__img {
+			width: 50%;
+			margin-right: 5em;
+		}
+
+		&__text {
+			width: 50%;
+
+			&-heading {
+				text-align: left;
+				font-size: 3rem;
+			}
+
+			&-content {
+				font-size: 1.7rem;
+			}
+
+			&-content,
+			span {
+				text-indent: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	// HEADER
+	.header {
+		background-image: url(/dist/img/desktop/header-desktop.jpg);
+	}
+	// ABOUT US
+	.about-us {
+		padding: 3em 10em;
+	}
+}

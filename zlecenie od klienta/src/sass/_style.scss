@@ -1,0 +1,161 @@
+@use 'colors' as c;
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: c.$main-bg;
+}
+
+.section {
+	padding: 2em;
+
+	&-title {
+		padding: 1em 0;
+		text-align: center;
+		font-size: 4rem;
+		text-transform: uppercase;
+	}
+}
+
+// NAVIGATION
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: c.$main-bg;
+	border-bottom: 1px solid #000;
+	z-index: 100;
+
+	.show-menu {
+		transform: translate(0);
+		opacity: 1;
+	}
+
+	.hamburger {
+		position: relative;
+		z-index: 100;
+
+		&-inner,
+		&-inner::before,
+		&-inner::after {
+			z-index: 100;
+		}
+	}
+
+	&__navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5em;
+	}
+
+	&__logo {
+		font-size: 3rem;
+
+		&-text {
+			padding: 15px;
+			color: c.$dark;
+
+			.fa-tree {
+				color: rgb(65, 62, 62);
+			}
+		}
+	}
+
+	&__links {
+		position: absolute;
+		top: 86px;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: calc(100vh - 86px);
+		background-color: c.$white;
+		transform: translateX(102%);
+		opacity: 0;
+		transition: transform 0.5s, opacity 0.5s;
+
+		&-link {
+			padding: 1.5em 2em;
+			font-size: 2.5rem;
+			color: c.$dark;
+		}
+	}
+}
+
+// HEADER
+.hero-bg {
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+}
+
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;
+	padding: 3em;
+	text-align: center;
+	line-height: 1.5;
+	color: c.$white;
+	text-shadow: 1px 1px #000;
+	background-image: url(/dist/img/mobile/header-mobile.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+
+	&__heading {
+		font-size: 3rem;
+		font-weight: 200;
+	}
+
+	&__text {
+		display: block;
+		padding-top: 1em;
+		font-weight: bold;
+	}
+}
+
+// ABOUT US
+.about-us {
+	&__img {
+		object-fit: cover;
+		width: 100%;
+		border-radius: 5px;
+		margin-bottom: 1em;
+	}
+
+	&__text {
+		line-height: 2;
+
+		&-heading {
+			margin: 0.3em 0 0.6em;
+			text-align: center;
+			font-size: 2.5rem;
+		}
+
+		&-content {
+			font-size: 1.5rem;
+
+			span {
+				display: block;
+				margin-top: 0.6em;
+			}
+		}
+
+		&-content,
+		span {
+			text-indent: 1em;
+		}
+	}
+}

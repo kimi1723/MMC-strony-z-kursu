@@ -1,0 +1,29 @@
+@media (min-width: 576px) {
+	.header {
+		// height: 45vh;
+	}
+
+	// NAVIGATION
+	.nav {
+		&__navbar {
+			padding: 1.5em 2em;
+		}
+
+		&__logo {
+			font-size: 3.5rem;
+		}
+	}
+
+	// HEADER
+
+	// ABOUT US
+	.about-us {
+		padding: 5em;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		// height: 45vh;
+	}
+}
