@@ -1,3 +1,15 @@
+.section {
+	padding: 1em 2em;
+
+	&-title {
+		font-weight: 400;
+		padding: 1em 0;
+		text-align: center;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;

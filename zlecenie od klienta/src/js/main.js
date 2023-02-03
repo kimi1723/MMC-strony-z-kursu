@@ -12,7 +12,6 @@ const handleNav = () => {
 // NA FOCUS TRZEBA TO NAPISAC
 const handleBtns = () => {
 	if (i === 0) {
-		console.log(i);
 		const activeBtn = document.querySelector('.cards-box__button--active');
 
 		activeBtn.classList.remove('cards-box__button--active');
