@@ -1,9 +1,6 @@
 @use 'colors' as c;
 
 @media (min-width: 992px) {
-	.header {
-		height: 40vh;
-	}
 	// NAVIGATION
 	.nav {
 		&__navbar {
@@ -16,8 +13,8 @@
 		}
 
 		&__links {
-			top: 0;
 			position: relative;
+			top: 0;
 			flex-direction: row;
 			height: auto;
 			max-height: 8rem;
@@ -25,7 +22,8 @@
 			opacity: 1;
 
 			&-link {
-				padding: 2em;
+				padding: 4em 2em;
+				font-size: 2rem;
 				color: c.$dark;
 				transition: background-color 0.3s, color 0.3s;
 
@@ -38,12 +36,19 @@
 	}
 
 	// HEADER
+	.header {
+		height: 60vh;
+
+		&__heading {
+			left: 5%;
+		}
+	}
 
 	// ABOUT US
 	.about-us {
 		&__content {
+			position: relative;
 			display: flex;
-			align-items: center;
 			justify-content: space-around;
 		}
 
@@ -54,14 +59,10 @@
 
 		&__text {
 			width: 50%;
+			text-align: left;
 
 			&-heading {
-				text-align: left;
-				font-size: 3rem;
-			}
-
-			&-content {
-				font-size: 1.7rem;
+				margin: 0 0 0.3em 0;
 			}
 
 			&-content,
@@ -73,12 +74,38 @@
 }
 
 @media (min-width: 1200px) {
+	.section {
+		&-title {
+			font-size: 5rem;
+		}
+	}
 	// HEADER
 	.header {
-		background-image: url(/dist/img/desktop/header-desktop.jpg);
+		&__heading {
+			left: 10%;
+			&-text {
+				font-size: 5rem;
+			}
+		}
 	}
 	// ABOUT US
 	.about-us {
 		padding: 3em 10em;
+
+		&__text-content {
+			font-size: 1.8rem;
+		}
+	}
+
+	// ASIDE
+	.aside {
+		margin-top: 4em;
+		max-height: 400px;
+		background-image: url(/dist/img/desktop/hero-img-desktop.jpg);
+
+		&-title {
+			padding: 1em 5em;
+			font-size: 5rem;
+		}
 	}
 }

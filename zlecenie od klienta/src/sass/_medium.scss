@@ -1,8 +1,9 @@
 @media (min-width: 576px) {
-	.header {
-		// height: 45vh;
+	.section {
+		&-title {
+			font-size: 4rem;
+		}
 	}
-
 	// NAVIGATION
 	.nav {
 		&__navbar {
@@ -15,15 +16,73 @@
 	}
 
 	// HEADER
+	.header {
+		height: 50vh;
+		&__heading {
+			font-size: 3rem;
+
+			&-text {
+				padding-top: 0;
+				font-size: 4rem;
+			}
+		}
+	}
 
 	// ABOUT US
 	.about-us {
 		padding: 5em;
+
+		&__text {
+			&-heading {
+				font-size: 3rem;
+			}
+
+			&-content {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	// ASIDE
+	.aside {
+		max-height: 200px;
+
+		&-title {
+			padding: 1em 3em;
+			text-shadow: 1px 1px #000;
+		}
 	}
 }
 
 @media (min-width: 768px) {
+	// HEADER
 	.header {
-		// height: 45vh;
+		height: 65vh;
+		background-image: url(/dist/img/desktop/header-desktop.jpg);
+
+		&__heading {
+			position: relative;
+			left: 2%;
+		}
+	}
+
+	// ASIDE
+	.aside {
+		&-title {
+			padding: 1em 2.5em;
+			font-size: 4rem;
+		}
+	}
+
+	// OFFER
+	.offer {
+		.cards-box {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			&__item {
+				margin: 3em;
+			}
+		}
 	}
 }
