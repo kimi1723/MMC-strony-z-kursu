@@ -2,6 +2,7 @@ const navBtn = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav__links');
 const navLinks = document.querySelectorAll('.nav__links-link');
 const offerBtns = document.querySelectorAll('.cards-box__button');
+const activeBtn = document.querySelector('.cards-box__button--active');
 let i = 0;
 
 const handleNav = () => {
@@ -9,17 +10,27 @@ const handleNav = () => {
 	navMenu.classList.toggle('show-menu');
 };
 
-// NA FOCUS TRZEBA TO NAPISAC
-const handleBtns = () => {
-	if (i === 0) {
-		const activeBtn = document.querySelector('.cards-box__button--active');
-
+const handleBtnsClick = e => {
+	if (i === 0 && true !== e.target.classList.contains('cards-box__button--active')) {
 		activeBtn.classList.remove('cards-box__button--active');
 		i++;
 	}
-	// lub offerbtns.foreach btn => btn.classlist.remove('cards-box__button--active')
 };
 
-offerBtns.forEach(btn => btn.addEventListener('click', handleBtns));
+const handleBtnsFocus = e => {
+	offerBtns.forEach(btn => {
+		if (
+			i === 0 &&
+			document.activeElement === btn &&
+			true !== e.target.classList.contains('cards-box__button--active')
+		) {
+			activeBtn.classList.remove('cards-box__button--active');
+			i++;
+		}
+	});
+};
+
+window.addEventListener('keyup', handleBtnsFocus);
+offerBtns.forEach(btn => btn.addEventListener('click', handleBtnsClick));
 navLinks.forEach(link => link.addEventListener('click', handleNav));
 navBtn.addEventListener('click', handleNav);

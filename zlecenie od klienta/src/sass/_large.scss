@@ -24,10 +24,12 @@
 			&-link {
 				padding: 4em 2em;
 				font-size: 2rem;
+				outline: none;
 				color: c.$dark;
 				transition: background-color 0.3s, color 0.3s;
 
-				&:hover {
+				&:hover,
+				&:focus {
 					color: c.$white;
 					background-color: c.$dark;
 				}

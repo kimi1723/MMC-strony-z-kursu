@@ -264,11 +264,21 @@ body {
 			}
 
 			&:hover,
-			&:focus {
+			&:focus,
+			&:active {
 				font-weight: 400;
 				color: c.$dark;
 				background-color: c.$light-green;
 				box-shadow: 0px 2px 5px hsl(125, 89%, 26%);
+			}
+
+			&.cards-box__button--active {
+				&:hover,
+				&:focus {
+					font-weight: 400;
+					background-color: hsl(125, 89%, 56%);
+					box-shadow: 0px 2px 5px hsl(125, 89%, 36%);
+				}
 			}
 		}
 	}
