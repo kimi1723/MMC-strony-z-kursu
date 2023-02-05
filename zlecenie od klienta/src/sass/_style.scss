@@ -304,7 +304,7 @@ body {
 
 	&-info {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-around;
 		width: 50%;
 
 		&__heading {
@@ -312,7 +312,7 @@ body {
 		}
 
 		&-list {
-			font-size: 1.3rem;
+			font-size: 1.4rem;
 
 			&__element {
 				margin: 1.5em 0;
@@ -330,9 +330,11 @@ body {
 	}
 
 	&-copyright {
-		font-size: 1.3rem;
+		font-size: 1.4rem;
 		padding: 2em 0;
 		border-top: 1px solid #000;
 		text-align: center;
 	}
 }
+
+// POBRAC KOLORY, POZMIENIAC NAZWY SASSA 

@@ -32,13 +32,13 @@ const handleBtnsFocus = e => {
 };
 
 const handleYear = () => {
-	const year = new Date();
+	const year = new Date().getFullYear();
 
 	footerYear.textContent = year;
 };
 
-document.addEventListener('DOMContentLoaded', handleYear);
 window.addEventListener('keyup', handleBtnsFocus);
 offerBtns.forEach(btn => btn.addEventListener('click', handleBtnsClick));
 navLinks.forEach(link => link.addEventListener('click', handleNav));
 navBtn.addEventListener('click', handleNav);
+handleYear();
