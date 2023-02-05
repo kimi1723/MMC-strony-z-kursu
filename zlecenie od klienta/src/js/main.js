@@ -3,6 +3,7 @@ const navMenu = document.querySelector('.nav__links');
 const navLinks = document.querySelectorAll('.nav__links-link');
 const offerBtns = document.querySelectorAll('.cards-box__button');
 const activeBtn = document.querySelector('.cards-box__button--active');
+const footerYear = document.querySelector('.footer-year');
 let i = 0;
 
 const handleNav = () => {
@@ -30,6 +31,13 @@ const handleBtnsFocus = e => {
 	});
 };
 
+const handleYear = () => {
+	const year = new Date();
+
+	footerYear.textContent = year;
+};
+
+document.addEventListener('DOMContentLoaded', handleYear);
 window.addEventListener('keyup', handleBtnsFocus);
 offerBtns.forEach(btn => btn.addEventListener('click', handleBtnsClick));
 navLinks.forEach(link => link.addEventListener('click', handleNav));
