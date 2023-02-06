@@ -1,6 +1,11 @@
 @use 'colors' as c;
 
 @media (min-width: 992px) {
+	// ADJUSTING NAV HEIGHT
+	html {
+		scroll-padding-top: 110px;
+	}
+
 	// NAVIGATION
 	.nav {
 		&__navbar {
@@ -133,8 +138,8 @@
 	// FOOTER
 	.footer {
 		&-box {
-			justify-content: space-between;
-			align-items: flex-start;
+			justify-content: space-around;
+			// align-items: flex-start;
 		}
 
 		&-logo {
@@ -142,7 +147,7 @@
 			width: auto;
 
 			&__link {
-				font-size: 7rem;
+				font-size: 6rem;
 			}
 		}
 

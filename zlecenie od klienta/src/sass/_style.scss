@@ -3,7 +3,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	scroll-padding-top: 7em;
+	scroll-padding-top: 86px;
 }
 
 body {
@@ -184,9 +184,10 @@ body {
 	align-items: center;
 
 	&-title {
+		margin-bottom: 1em;
 		text-align: center;
 		font-size: 1.8rem;
-		margin-bottom: 1em;
+		color: c.$dark-grey;
 	}
 
 	.cards-box {
@@ -200,29 +201,28 @@ body {
 			flex-direction: column;
 			align-items: center;
 			margin: 2em 0;
-			padding: 2.5em 4em;
+			padding: 3em 4em;
 			width: 90%;
 			max-width: 300px;
-			border-radius: 5px;
-			box-shadow: 0 2px 3px c.$dark;
+			border-radius: 8px;
+			box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
 
 			&-title {
 				font-weight: 400;
 				font-size: 3rem;
 			}
+
+			&-price {
+				margin: 0.3em 0 0.4em;
+				font-size: 4rem;
+				font-weight: bold;
+			}
 		}
 
-		&__price {
-			margin: 0.2em 0 0.4em;
-			font-size: 4rem;
-			font-weight: bold;
-		}
 		&__list {
-			line-height: 2;
+			line-height: 1.8;
 
 			&-item {
-				display: flex;
-				align-items: center;
 				font-size: 1.5rem;
 
 				&--disabled {
@@ -240,17 +240,18 @@ body {
 		}
 
 		&__button {
-			padding: 0.4em 0;
-			margin: 1.5em 0 1em;
+			padding: 0.2em 0;
+			margin: 1em 0 0.5em;
 			width: 100%;
+			max-width: 194px;
 			font-size: 2.2rem;
 			font-weight: 200;
-			color: c.$disabled-button;
+			color: c.$disabled;
 			outline: none;
 			border: none;
 			border-radius: 8px;
 			background-color: transparent;
-			box-shadow: 0 2px 3px c.$dark;
+			box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5);
 			transition: 0.4s;
 			transition-property: color, background-color, box-shadow;
 			cursor: pointer;
@@ -259,7 +260,7 @@ body {
 				font-weight: 400;
 				color: c.$dark;
 				background-color: c.$light-green;
-				box-shadow: 0px 2px 5px hsl(125, 89%, 26%);
+				box-shadow: 0 1px 5px 2px c.$light-green-box-shadow;
 			}
 
 			&:hover,
@@ -267,16 +268,22 @@ body {
 			&:active {
 				font-weight: 400;
 				color: c.$dark;
+				box-shadow: 0 1px 5px 2px c.$light-green-box-shadow;
+			}
+
+			&:hover {
 				background-color: c.$light-green;
-				box-shadow: 0px 2px 5px hsl(125, 89%, 26%);
+			}
+
+			&:focus,
+			&:active {
+				background-color: c.$desaturated-light-green;
 			}
 
 			&.cards-box__button--active {
 				&:hover,
 				&:focus {
-					font-weight: 400;
-					background-color: hsl(125, 89%, 56%);
-					box-shadow: 0px 2px 5px hsl(125, 89%, 36%);
+					background-color: c.$desaturated-light-green;
 				}
 			}
 		}

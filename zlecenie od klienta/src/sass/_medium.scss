@@ -52,6 +52,37 @@
 		}
 	}
 
+	// OFFER
+	.offer {
+		&-title {
+			font-size: 2rem;
+		}
+
+		.cards-box {
+			&__item {
+				max-width: 320px;
+
+				&-title {
+					font-size: 3.5rem;
+				}
+
+				&-price {
+					font-size: 4.5rem;
+				}
+			}
+
+			&__list {
+				&-item {
+					font-size: 1.8rem;
+				}
+			}
+
+			&__button {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
 	// FOOTER
 	.footer {
 		&-box {
