@@ -1,8 +1,12 @@
-$main-bg: #fff;
-$footer-bg: #ddd;
-$white: #fff;
-$leading: #0f0;
+// PRIMARY
+$main-bg: rgb(255, 255, 255);
+$footer-bg: rgb(245, 245, 245);
+$leading: rgb(0, 255, 0);
+$white: rgb(255, 255, 255);
 $dark: rgb(2, 11, 5);
+
+// OTHER
 $greyed-out: rgb(149, 149, 149);
 $light-green: rgb(42, 222, 114);
 $disabled-button: rgb(109, 109, 109);
+$dark-grey: rgb(74, 74, 78);

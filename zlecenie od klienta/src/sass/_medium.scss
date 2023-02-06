@@ -51,6 +51,36 @@
 			text-shadow: 1px 1px #000;
 		}
 	}
+
+	// FOOTER
+	.footer {
+		&-box {
+			margin: 5em 0 11em;
+		}
+
+		&-logo {
+			&__link {
+				font-size: 5rem;
+			}
+		}
+
+		&-info {
+			&__about-us,
+			&__our-company,
+			&__documents {
+				padding: 3em 0;
+				width: 33%;
+			}
+
+			&__heading {
+				font-size: 2.5rem;
+			}
+
+			&-list {
+				font-size: 1.4rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
