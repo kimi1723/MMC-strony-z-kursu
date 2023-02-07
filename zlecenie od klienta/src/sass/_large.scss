@@ -60,8 +60,8 @@
 		}
 
 		&__img {
-			width: 50%;
 			margin-right: 5em;
+			width: 50%;
 		}
 
 		&__text {
@@ -151,7 +151,6 @@
 	.footer {
 		&-box {
 			justify-content: space-around;
-			// align-items: flex-start;
 		}
 
 		&-logo {
@@ -164,8 +163,8 @@
 		}
 
 		&-info {
-			width: auto;
 			justify-content: space-around;
+			width: auto;
 
 			&__about-us,
 			&__our-company,
