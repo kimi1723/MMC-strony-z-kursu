@@ -82,13 +82,16 @@
 	// OFFER
 	.offer {
 		&__link {
-			font-size: 2.5rem;
+			font-size: 3rem;
 		}
 	}
 	// FOOTER
 	.footer {
 		&-box {
 			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			padding-top: 3em;
 		}
 
 		&-logo {
@@ -101,7 +104,14 @@
 		}
 
 		&-info {
+			padding-top: 0;
 			width: 75%;
+
+			&__about-us,
+			&__our-company,
+			&__documents {
+				padding: 0;
+			}
 		}
 	}
 }
@@ -143,18 +153,13 @@
 	// OFFER
 	.offer {
 		&__link {
-			font-size: 3rem;
+			font-size: 3.5rem;
 		}
 	}
 
 	// FOOTER
 	.footer {
-		&-box {
-			justify-content: space-around;
-		}
-
 		&-logo {
-			margin-top: 3em;
 			width: auto;
 
 			&__link {
