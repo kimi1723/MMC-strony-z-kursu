@@ -1,6 +1,6 @@
 @media (min-width: 576px) {
 	.section {
-		&-title {
+		&__title {
 			font-size: 4rem;
 		}
 	}
@@ -46,7 +46,7 @@
 	.aside {
 		max-height: 200px;
 
-		&-title {
+		&__title {
 			padding: 1em 3em;
 			text-shadow: 1px 1px #000;
 		}
@@ -54,7 +54,7 @@
 
 	// OFFER
 	.offer {
-		&-title {
+		&__title {
 			font-size: 2rem;
 		}
 
@@ -127,7 +127,7 @@
 
 	// ASIDE
 	.aside {
-		&-title {
+		&__title {
 			padding: 1em 2.5em;
 			font-size: 4rem;
 		}

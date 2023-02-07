@@ -1,35 +1,13 @@
+const footerYear = document.querySelector('.footer-year');
+
 const navBtn = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav__links');
 const navLinks = document.querySelectorAll('.nav__links-link');
+
 const offerBtns = document.querySelectorAll('.cards-box__button');
 const activeBtn = document.querySelector('.cards-box__button--active');
-const footerYear = document.querySelector('.footer-year');
+const btnEventListeners = ['click', 'keydown'];
 let i = 0;
-
-const handleNav = () => {
-	navBtn.classList.toggle('is-active');
-	navMenu.classList.toggle('show-menu');
-};
-
-const handleBtnsClick = e => {
-	if (i === 0 && true !== e.target.classList.contains('cards-box__button--active')) {
-		activeBtn.classList.remove('cards-box__button--active');
-		i++;
-	}
-};
-
-const handleBtnsFocus = e => {
-	offerBtns.forEach(btn => {
-		if (
-			i === 0 &&
-			document.activeElement === btn &&
-			true !== e.target.classList.contains('cards-box__button--active')
-		) {
-			activeBtn.classList.remove('cards-box__button--active');
-			i++;
-		}
-	});
-};
 
 const handleYear = () => {
 	const year = new Date().getFullYear();
@@ -37,8 +15,27 @@ const handleYear = () => {
 	footerYear.textContent = year;
 };
 
-window.addEventListener('keyup', handleBtnsFocus);
-offerBtns.forEach(btn => btn.addEventListener('click', handleBtnsClick));
+const handleNav = () => {
+	navBtn.classList.toggle('is-active');
+	navMenu.classList.toggle('show-menu');
+};
+
+const handleBtns = () => {
+	setTimeout(
+		() =>
+			offerBtns.forEach(btn => {
+				if (i === 0 && document.activeElement === btn) {
+					activeBtn.classList.remove('cards-box__button--active');
+					i++;
+				}
+			}),
+		'1'
+	);
+};
+
+handleYear();
 navLinks.forEach(link => link.addEventListener('click', handleNav));
 navBtn.addEventListener('click', handleNav);
-handleYear();
+btnEventListeners.forEach(e => {
+	window.addEventListener(e, handleBtns);
+});
