@@ -256,13 +256,7 @@ body {
 			transition-property: color, background-color, box-shadow;
 			cursor: pointer;
 
-			&--active {
-				font-weight: 400;
-				color: c.$dark;
-				background-color: c.$light-green;
-				box-shadow: 0 1px 5px 2px c.$light-green-box-shadow;
-			}
-
+			&--active,
 			&:hover,
 			&:focus,
 			&:active {
@@ -271,20 +265,15 @@ body {
 				box-shadow: 0 1px 5px 2px c.$light-green-box-shadow;
 			}
 
+			&--active,
 			&:hover {
 				background-color: c.$light-green;
 			}
 
+			&--active:hover,
 			&:focus,
 			&:active {
 				background-color: c.$desaturated-light-green;
-			}
-
-			&.cards-box__button--active {
-				&:hover,
-				&:focus {
-					background-color: c.$desaturated-light-green;
-				}
 			}
 		}
 	}
@@ -363,5 +352,3 @@ body {
 		border-top: 1px solid c.$dark-grey;
 	}
 }
-
-// POBRAC KOLORY, POZMIENIAC NAZWY SASSA
