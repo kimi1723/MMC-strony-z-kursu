@@ -34,8 +34,8 @@ const handleBtns = () => {
 };
 
 handleYear();
-navLinks.forEach(link => link.addEventListener('click', handleNav));
 navBtn.addEventListener('click', handleNav);
+navLinks.forEach(link => link.addEventListener('click', handleNav));
 btnEventListeners.forEach(e => {
 	window.addEventListener(e, handleBtns);
 });

@@ -81,6 +81,10 @@
 				font-size: 2.5rem;
 			}
 		}
+
+		&__link {
+			font-size: 2rem;
+		}
 	}
 
 	// FOOTER
@@ -143,6 +147,10 @@
 			&__item {
 				margin: 3em;
 			}
+		}
+
+		&__link {
+			font-size: 2.2rem;
 		}
 	}
 }
