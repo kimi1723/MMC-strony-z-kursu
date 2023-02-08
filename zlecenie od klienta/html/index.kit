@@ -2,9 +2,7 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @include 'meta.kit' -->
 
     <title>Forest Group | Piękno natury w jednym miejscu</title>
     <meta name="description"
@@ -13,11 +11,11 @@
     <!-- @include 'styles.kit' -->
 </head>
 
-<body>
+<body class="main-page">
     <!-- @include 'nav.kit' -->
 
     <!-- HEADER -->
-    <header class="header">
+    <header class="header scrollspy-section" id="index">
         <div class="wrapper">
             <div class="hero-bg"></div>
             <h1 class="header__heading">Forest Group
@@ -27,14 +25,16 @@
     </header>
 
     <!-- FIRST SECTION - ABOUT US -->
-    <section id="about-us" class="section about-us">
+    <section id="about-us" class="section about-us scrollspy-section">
         <div class="wrapper">
 
 
             <h2 class="section__title">O nas</h2>
 
             <div class="about-us-box">
-                <img src="/dist/img/mobile/about-us-mobile.jpg" alt="" class="about-us__img">
+                <img src="/dist/img/mobile/about-us-mobile.jpg"
+                    alt="Jezioro znajdujące się na terenie naszego parku pośrodku któregó można spostrzec małą, kamienną wysepkę z resztkami ziemi, z której wyrasta małe drzewo. W tle widać piękne drzewa skąpane w słońcu a przed nimi kajak poruszający się po jeziorze, którego woda odbija zieleń drzew."
+                    class="about-us__img">
 
                 <div class="about-us__text">
                     <h3 class="about-us__text-heading">Niezapomniane przygody</h3>
@@ -66,7 +66,7 @@
 
     <!-- SECOND SECTION - OFFER -->
     <div class="wrapper">
-        <section id="offer" class="section offer">
+        <section id="offer" class="section offer scrollspy-section">
             <h2 class="section__title">Oferta</h2>
             <h3 class="offer__title">Wybierz jedną z naszych wspaniałych ofert!</h3>
 
@@ -127,7 +127,7 @@
 
             </div>
 
-            <h3><a href="/oferta.html#" class="offer__link">Sprawdź wszystkie oferty</a></h3>
+            <h3><a href="/oferta.html" class="offer__link">Sprawdź wszystkie oferty</a></h3>
         </section>
     </div>
     </main>
