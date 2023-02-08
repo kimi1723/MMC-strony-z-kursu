@@ -150,4 +150,25 @@
 			}
 		}
 	}
+
+	// CONTACT
+	.contact {
+		&__form {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			&-box {
+				&:first-of-type,
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					width: 30%;
+				}
+			}
+
+			&-btn {
+				max-width: 300px;
+			}
+		}
+	}
 }
